@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
 
-namespace ServiceManeger.Extensions
+namespace ServiceManager.Extensions
 {
     public static class ControlExtensions
     {

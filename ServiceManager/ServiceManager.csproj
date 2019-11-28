@@ -9,8 +9,8 @@
     <ProjectGuid>{2A152F98-FC81-481A-846B-5576B77148F2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServiceManeger</RootNamespace>
-    <AssemblyName>ServiceManeger</AssemblyName>
+    <RootNamespace>ServiceManager</RootNamespace>
+    <AssemblyName>ServiceManager</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -83,6 +83,7 @@
     <Compile Include="Controls\DataGridComparer.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="FormExtensions.cs" />
     <Compile Include="ServiceManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>

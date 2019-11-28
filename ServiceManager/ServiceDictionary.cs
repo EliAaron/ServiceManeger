@@ -6,7 +6,7 @@ using System.ServiceProcess;
 using System.Collections;
 using System.Diagnostics;
 
-namespace ServiceManeger
+namespace ServiceManager
 {
     /// <summary>
     /// A ServiceControllerPlus Dictionary collection.

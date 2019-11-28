@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using System.Diagnostics;
 
-namespace ServiceManeger.Controls
+namespace ServiceManager.Controls
 {
 	#region Data Grid Column Comparer
 

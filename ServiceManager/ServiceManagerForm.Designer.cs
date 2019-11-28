@@ -1,4 +1,4 @@
-﻿namespace ServiceManeger
+﻿namespace ServiceManager
 {
     partial class ServiceManagerForm
     {
@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tablePanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.paneldataGridView = new System.Windows.Forms.Panel();
-            this.dataGridView = new ServiceManeger.Controls.SortedDataGridView();
+            this.dataGridView = new ServiceManager.Controls.SortedDataGridView();
             this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stop = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -427,7 +427,7 @@
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Panel paneldataGridView;
         private System.Windows.Forms.Panel panelButtom;
-        private ServiceManeger.Controls.SortedDataGridView dataGridView;
+        private ServiceManager.Controls.SortedDataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Key;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Stop;
         private System.Windows.Forms.DataGridViewTextBoxColumn DisplayName;

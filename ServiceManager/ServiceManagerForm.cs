@@ -8,13 +8,13 @@ using System.Text;
 using System.Windows.Forms;
 using System.ServiceProcess;
 using System.Management;
-using ServiceManeger;
+using ServiceManager;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using ServiceManeger.Extensions;
-using ServiceManeger.Controls;
+using ServiceManager.Extensions;
+using ServiceManager.Controls;
 
-namespace ServiceManeger
+namespace ServiceManager
 {
     public partial class ServiceManagerForm : Form
     {
@@ -160,24 +160,41 @@ namespace ServiceManeger
         private void LoadServices()
         {
             textBoxLog.Text = "Loading service data...";
-  
+
             textBoxLog.Refresh();
             dataGridView.Rows.Clear();
             Refresh();
+
             this.Cursor = Cursors.WaitCursor;
+            Color originalBackColor = this.BackColor;
+            originalBackColor = CombineColors(originalBackColor, Color.SaddleBrown, 9, 1);
+
+            //Form grayscaleForm = this.Grayscale();
 
             Task loadSerivicesTask = new Task(new Action(() =>
             {
                 ServiceDictionary.Load();
 
-                this.BeginInvoke(new Action( ()=>
+                this.BeginInvoke(new Action(() =>
                 {
                     DisplayServices();
+
                     this.Cursor = Cursors.Default;
+                    //grayscaleForm.Close();
+                    this.BackColor = originalBackColor;
                 }));
             }));
 
             loadSerivicesTask.Start();
+        }
+
+        private Color CombineColors(Color color1, Color color2, int color1Fact, int color2Fact)
+        {
+            this.BackColor = Color.FromArgb(
+                (byte)((color1Fact * color1.R + color2Fact * color2.R) / (color1Fact + color2Fact)),
+                (byte)((color1Fact * color1.G + color2Fact * color2.G) / (color1Fact + color2Fact)),
+                (byte)((color1Fact * color1.B + color2Fact * color2.B) / (color1Fact + color2Fact)));
+            return color1;
         }
 
         private void DisplayServices()
@@ -315,6 +332,5 @@ namespace ServiceManeger
         {
             dataGridView.Refresh();
         }
-        
     }
 }

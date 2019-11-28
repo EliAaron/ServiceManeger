@@ -6,7 +6,7 @@ using System.ServiceProcess;
 using System.Management;
 using System.Diagnostics;
 
-namespace ServiceManeger
+namespace ServiceManager
 {
     /// <summary>
     /// Extends ServiceController.
